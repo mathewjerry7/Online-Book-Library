@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+
+
+input[type=text] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-family:Lucida Handwriting;
+font-size:20px;
+color:pink;
+box-sizing: border-box;
+}
+body {
+background-image: url(./images/catalog.jpg);
+background-size: cover;
+background-color: black;
+background-repeat: no-repeat;
+margin-right: 200px;
+font-family: 'Pacifico', cursive;
+text-align: center;
+font-size: 10px;
+color: white;
+}
+
+h1 {color: white; font-size: 80px;}
+h1 {font-family: 'Pacifico', cursive; text-align: center; font-size: 80px;}
+}
+p{
+color: white; 
+margin : 10px 350px 2px 10px;
+padding: 50px 30px 50px 80px;
+font-family:Lucida Handwriting;
+text-align:justify;
+}
+#myInput
+{
+width: 100%;
+background-color: lightblue;
+color: white;
+padding: 12px 20px;
+display:inline-block;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+font-family:Lucida Handwriting;
+font-size:30px;
+color:tomato;
+}
+table,th,td {
+/* border: 1px solid #99CCFF;*/
+}
+table {
+border-collapse: collapse;
+width:50%;
+}
+th,td
+{
+height: 50px;
+font-family:Kristen ITC;
+font-size:2em;
+color:#CC0099;
+text-align :left;
+padding:20px;
+vertical-align : bottom
+border-bottom: 1px solid #6666FF;
+}
+tr:nth-child(even){background-color: #99CCFF; }
+tr:hover{background-color:#6699FF;}
+caption {
+margin:15px;
+font-family:Kristen ITC;
+font-size:1em;
+color:#CC0099;
+caption-side: bottom;
+}
+</style>
+</head>
+<body>
+
+<h1>Search Books</h1>
+<h2>Type something in the input field to search the book according to Book Name, Author's Name or Genere:</h2>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+<center>
+<table>
+  <thead>
+  <tr>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Genere</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>Alchemist</td>
+    <td>Paulo Coelho</td>
+    <td>Quest, Fantasy Fiction, Adventure Fiction</td>
+  </tr>
+  <tr>
+    <td>2 States</td>
+    <td>Chetan Bhagat</td>
+    <td>Ficton, Love</td>
+  </tr>
+  <tr>
+    <td>Right Fit Wrong Shoe</td>
+    <td>Varsha Dixit</td>
+    <td>Fiction</td>
+  </tr>
+  <tr>
+    <td>Circe</td>
+    <td>Madeline Miller</td>
+    <td>Historical Fiction, Fantasy Fiction</td>
+  </tr>
+  <tr>
+    <td>To Kill A MockingBird</td>
+    <td>Harper Lee</td>
+    <td>Southern Gothic, Coming-Of-Age Fiction, Bildungsroman</td>
+  </tr>
+  <tr>
+    <td>Till The Last Breath</td>
+    <td>Durjoy Datta</td>
+    <td>Fiction, Romantic Fantasy</td>
+  </tr>
+  <tr>
+    <td>Half Girlfriend</td>
+    <td>Chetan Bhagat</td>
+    <td>Romance</td>
+  </tr>
+  <tr>
+    <td>The Girl In Room 105</td>
+    <td>Chetan Bhagat</td>
+    <td>Fiction, Romance, Thriller, Suspense</td>
+  </tr>
+  </tbody>
+</table>
+</center>
+\<br/> 
+<font size="50px"><center><b><a href="index.html"> Back </a></b></center></font>  
+
+</body>
+</html>
